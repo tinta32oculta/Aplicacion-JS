@@ -21,11 +21,11 @@ async function initializeServer() {
   try {
     // Testear conexión a la base de datos
     await sequelize.authenticate();
-    console.log('✅ Conexión a SQLite establecida correctamente');
+    console.log(' Conexión a SQLite establecida correctamente');
 
     // Sincronizar modelos con la base de datos
     await sequelize.sync({ force: false }); // force: true resetea las tablas (solo desarrollo)
-    console.log('🔄 Modelos sincronizados con la base de datos');
+    console.log(' Modelos sincronizados con la base de datos');
 
     // Iniciar servidor
     app.listen(PORT, () => {
