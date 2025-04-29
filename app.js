@@ -29,8 +29,8 @@ async function initializeServer() {
 
     // Iniciar servidor
     app.listen(PORT, () => {
-      console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
-      console.log('📌 Endpoints disponibles:');
+      console.log(` Servidor corriendo en http://localhost:${PORT}`);
+      console.log(' Endpoints disponibles:');
       console.log(`- GET    http://localhost:${PORT}/api/tasks`);
       console.log(`- POST   http://localhost:${PORT}/api/tasks`);
       console.log(`- PATCH  http://localhost:${PORT}/api/tasks/:id`);
@@ -38,7 +38,7 @@ async function initializeServer() {
     });
 
   } catch (error) {
-    console.error('❌ Error al iniciar el servidor:', error);
+    console.error(' Error al iniciar el servidor:', error);
     process.exit(1); // Salir con código de error
   }
 }
@@ -48,7 +48,7 @@ initializeServer();
 
 // Manejo de errores global
 process.on('unhandledRejection', (err) => {
-  console.error('⚠️ Error no manejado:', err);
+  console.error('⚠ Error no manejado:', err);
 });
 
 // Exportar para testing (opcional)
